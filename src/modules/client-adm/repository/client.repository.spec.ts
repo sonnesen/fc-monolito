@@ -40,7 +40,6 @@ describe("Client Repository test", () => {
         "SC",
         "88888-888"
       )
-      // address: "Rua 123",
     })
 
     const repository = new ClientRepository()
@@ -64,7 +63,6 @@ describe("Client Repository test", () => {
   })
 
   it("should find a client", async () => {
-
     const client = await ClientModel.create({
       id: '1',
       name: 'Lucian',
@@ -75,7 +73,7 @@ describe("Client Repository test", () => {
       complement: "Casa Verde",
       city: "Criciúma",
       state: "SC",
-      zipcode: "88888-888",      
+      zipcode: "88888-888",
       createdAt: new Date(),
       updatedAt: new Date()
     })

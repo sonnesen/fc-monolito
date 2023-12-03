@@ -6,7 +6,6 @@ import ClientAdmFacade from "./client-adm.facade"
 import ClientAdmFacadeFactory from "../factory/client-adm.facade.factory"
 import Address from "../../@shared/domain/value-object/address"
 
-
 describe("Client Adm Facade test", () => {
 
   let sequelize: Sequelize
@@ -28,7 +27,6 @@ describe("Client Adm Facade test", () => {
   })
 
   it("should create a client", async () => {
-
     const repository = new ClientRepository()
     const addUsecase = new AddClientUseCase(repository)
     const facade = new ClientAdmFacade({
@@ -64,15 +62,6 @@ describe("Client Adm Facade test", () => {
   })
 
   it("should find a client", async () => {
-
-    // const repository = new ClientRepository()
-    // const addUsecase = new AddClientUseCase(repository)
-    // const findUseCase = new FindClientUseCase(repository)
-    // const facade = new ClientAdmFacade({
-    //   addUseCase: addUsecase,
-    //   findUseCase: findUseCase
-    // })
-
     const facade = ClientAdmFacadeFactory.create()
 
     const input = {
